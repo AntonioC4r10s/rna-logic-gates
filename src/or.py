@@ -2,6 +2,7 @@
 import random
 import numpy as np
 
+
 #   OR
 #   1 - entradas 0 e 0 - saída 0
 #   2 - entradas 0 e 1 - saída 1
@@ -40,6 +41,7 @@ def rna(entrada1, entrada2):
         i += 1
 
     print('y = ' + str(y))
+    return w0, w1, w2
 
 
 #   Função retorna o valor do produto escalar entre as entradas e os pesos.
@@ -75,4 +77,6 @@ def vc(entrada1, entrada2):
         return 0
 
 
-rna(1, 0)
+x1 = input("Entre com o valor de x1:")
+x2 = input("Entre com o valor de x2:")
+rna(int(x1), int(x2))
