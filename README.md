@@ -1,2 +1,2 @@
 # rna-logic-gates
-Construir simples modelos de neuronios de rna que consigam calcular saidas de algumas portas lógicas.
+Construir simples modelos de neurônios de RNA que consigam calcular sadas de algumas portas lógicas.
