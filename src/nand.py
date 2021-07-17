@@ -1,14 +1,14 @@
-#   Para a porta E - (AND)
+#   Para a porta E' - (NAND)
 import random
 import numpy as np
 import matplotlib.pyplot as plt
 
 
-#   AND
-#   1 - entradas 0 e 0 - saída 0
-#   2 - entradas 0 e 1 - saída 0
-#   3 - entradas 1 e 0 - saída 0
-#   4 - entradas 1 e 1 - saída 1
+#   NAND
+#   1 - entradas 0 e 0 - saída 1
+#   2 - entradas 0 e 1 - saída 1
+#   3 - entradas 1 e 0 - saída 1
+#   4 - entradas 1 e 1 - saída 0
 
 
 def rna(entrada1, entrada2):
@@ -55,16 +55,16 @@ def ft(a, b):
 #   Função retorna se o valor de entrada é verdadeiro ou não.
 def ver(entrada1, entrada2, y_re):
     if entrada1 == 0 and entrada2 == 0:
-        if y_re == 0:
+        if y_re == 1:
             return 1
     if entrada1 == 0 and entrada2 == 1:
-        if y_re == 0:
+        if y_re == 1:
             return 1
     if entrada1 == 1 and entrada2 == 0:
-        if y_re == 0:
+        if y_re == 1:
             return 1
     if entrada1 == 1 and entrada2 == 1:
-        if y_re == 1:
+        if y_re == 0:
             return 1
     else:
         return 0
@@ -73,9 +73,9 @@ def ver(entrada1, entrada2, y_re):
 #   Função retorna o valor esperado para a porta lógica.
 def vc(entrada1, entrada2):
     if entrada1 == 0 or entrada2 == 0:
-        return 0
-    else:
         return 1
+    else:
+        return 0
 
 
 y_obtido = []
