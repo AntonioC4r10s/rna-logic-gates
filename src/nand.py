@@ -99,7 +99,7 @@ space = np.arange(0, repeat, 1)
 
 plt.scatter(space, y_esperado, label='Valores esperados', color='r', marker='.')
 plt.scatter(space, y_obtido, label='Valores obtidos', color='b', marker='.')
-plt.title('Repetições do RNA')
+plt.title('Repetições do RNA - Para a porta NAND')
 plt.xlabel("Taxa de certos: " + str((n_y_cer / repeat) * 100) + '%')
 plt.legend()
 plt.show()
