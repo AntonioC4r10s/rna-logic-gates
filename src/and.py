@@ -35,7 +35,7 @@ def rna(entrada1, entrada2):
         if ver(entrada1, entrada2, y) == 0:
             w0 = w0 + n * (vc(entrada1, entrada2) - y) * bias
             w1 = w1 + n * (vc(entrada1, entrada2) - y) * entrada1
-            w1 = w1 + n * (vc(entrada1, entrada2) - y) * entrada2
+            w2 = w2 + n * (vc(entrada1, entrada2) - y) * entrada2
 #        if i > 2:
 #            if aux[i] == aux[i - 2]:
 #                i = n_epochs
@@ -99,7 +99,7 @@ space = np.arange(0, repeat, 1)
 
 plt.scatter(space, y_esperado, label='Valores esperados', color='r', marker='.')
 plt.scatter(space, y_obtido, label='Valores obtidos', color='b', marker='.')
-plt.title('Repetições do RNA')
-plt.xlabel("Taxa de certos: " + str((n_y_cer / repeat) * 100) + '%')
+plt.title('Repetições do RNA- para a porta AND')
+plt.xlabel("Taxa de acertos: " + str((n_y_cer / repeat) * 100) + '%')
 plt.legend()
 plt.show()
